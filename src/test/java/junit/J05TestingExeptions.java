@@ -45,8 +45,8 @@ public class J05TestingExeptions {
 		assertThrows(ArithmeticException.class, () -> divide(x, y));
 	}
 
-	private int divide(int x, int y) {
-		return x / y;
+	private int divide(int a, int b) {
+		return a / b;
 	}
 
 	@Test
