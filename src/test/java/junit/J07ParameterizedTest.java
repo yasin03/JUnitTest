@@ -39,9 +39,21 @@ class J07ParameterizedTest {
 	@ParameterizedTest
 	@CsvSource(value = {
 			"MERHABA, merhaba",
-			"JAVA,java"
+			"JAVA,java",
+			"JUNÝT,junit"
 	})
-	void tes() {
-		
+	void upperCaseTest2(String s1, String s2) {
+		assertEquals(s1, s2.toUpperCase());
 	}
+	
+	@ParameterizedTest
+	@CsvSource(value = {"true,java,a",	"true,junit,u",	"false,hello,a"	})
+	void containsTest (Boolean b1, String s1, String s2) {
+		assertEquals(b1, s1.contains(s2));
+	}
+	
+
+	
 }
+
+
