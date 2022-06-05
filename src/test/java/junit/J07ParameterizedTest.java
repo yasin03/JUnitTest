@@ -40,7 +40,8 @@ class J07ParameterizedTest {
 	@CsvSource(value = {
 			"MERHABA, merhaba",
 			"JAVA,java",
-			"JUNÝT,junit"
+			"JUNÝT,junit", 
+			"\"\",\"\""
 	})
 	void upperCaseTest2(String s1, String s2) {
 		assertEquals(s1, s2.toUpperCase());
